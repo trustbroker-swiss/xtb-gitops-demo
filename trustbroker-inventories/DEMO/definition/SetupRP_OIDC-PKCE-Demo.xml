@@ -29,6 +29,7 @@ You can instead use:
                 />
                 <AuthorizationGrantTypes>
                     <GrantType>authorization_code</GrantType>
+                    <GrantType>refresh_token</GrantType>
                 </AuthorizationGrantTypes>
                 <ClientAuthenticationMethods>
                     <Method>none</Method>
