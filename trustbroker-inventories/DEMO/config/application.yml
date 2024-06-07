@@ -112,7 +112,7 @@ trustbroker:
           password: ${trustbroker.config.signer.password}
           keyEntryId: ${trustbroker.config.signer.keyEntryId}
       samlEncrypt: false # encrypt SAML messages sent from XTB/SAML to XTB/OIDC (more SAMl attributes than OIDC claims
-      keySchedule: "* * 1 * * *" # key rotation daily at 1 am (see spring CronExpression)
+      keySchedule: "0 0 1 * * *" # key rotation daily at 1 am (see spring CronExpression)
       keyExpirationMinutes: 2880 # keys valid for 48 hours (requires clients to fetch keys at least once a day)
       keyDeletionMinutes: 3000 # keys kept 2h longer in the database for debugging
       defaultQoa: "urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified" # fallback for acr_values claims

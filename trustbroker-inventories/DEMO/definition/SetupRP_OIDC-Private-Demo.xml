@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelyingPartySetup>
-    <RelyingParty id="XTB_demo-priv" base="ProfileRP_DemoDefaults.xml">
+    <RelyingParty id="XTB_demo-private" base="ProfileRP_DemoDefaults.xml">
         <Oidc>
-            <Client id="XTB-demo-private">
+            <Client id="XTB_demo-private">
                 <RedirectUris>
                     <ACUrl>http://localhost:9090/home</ACUrl>
                     <ACUrl>https://oidcdebugger.com/debug</ACUrl>
