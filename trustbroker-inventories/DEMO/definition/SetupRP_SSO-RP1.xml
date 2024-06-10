@@ -8,7 +8,7 @@
         <ClaimsProviderMappings>
             <ClaimsProvider id="urn:trustbroker.swiss:idp:SAML-MOCK-1" />
             <ClaimsProvider id="urn:trustbroker.swiss:idp:SAML-MOCK-2" />
-            <ClaimsProvider id="urn:trustbroker.swiss:idp:SAML-MOCK-3" relyingPartyAlias="urn:trustbroker.swiss:sp:DEMO-RP-3"/>
+            <ClaimsProvider id="urn:trustbroker.swiss:idp:SAML-MOCK-3" relyingPartyAlias="urn:trustbroker.swiss:sp:SSO-RP-3"/>
         </ClaimsProviderMappings>
     </RelyingParty>
 </RelyingPartySetup>
