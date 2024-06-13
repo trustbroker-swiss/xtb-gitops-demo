@@ -20,7 +20,7 @@ You can instead use:
             <Client id="XTB_demo-pkce" realm="demo">
                 <RedirectUris>
                     <ACUrl>https://spoofable.redirect.uri.*</ACUrl> <!-- rejected, domain spoofing possible here -->
-                    <ACUrl>http://localhost:[0-9]+</ACUrl> <!-- accepted, developers put services anywhere (: prevents spoofing) -->
+                    <ACUrl>http://localhost:0/.*</ACUrl> <!-- accepted, developers put services anywhere (0 == any port) -->
                     <ACUrl>https://oidcdebugger.com/debug</ACUrl> <!-- play around with authorization_code flows -->
                 </RedirectUris>
                 <OidcSecurityPolicies
