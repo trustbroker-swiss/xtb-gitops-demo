@@ -70,7 +70,7 @@ trustbroker:
       requireSignedAssertion: true # CP/IDP per default must sign assertion within response
       validateAuthnRequest: true # RP/SP per default must sign request
       validateXmlSchema: true # Peers must comply to SAML protocol schemas pre default
-      validateAcs: true # Incoming AssertionConsumerURL is validated against ACWhitelist
+      validateAcs: false # Incoming AssertionConsumerURL is validated against ACWhitelist
       validateRelayState: true # SAML RelayState is required and must match session
       validateAudience: true # SAML audience is matched against XTB issuer if found
       requireAudienceRestriction: false # Non-matching SAML audience results in an error
