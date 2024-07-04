@@ -11,7 +11,7 @@
                 <OidcSecurityPolicies
                         requireProofKey="false"
                         tokenTimeToLiveMin="10"
-                        sessionTimeToLiveMin="20"
+                        refreshTokenTimeToLiveMin="3"
                 />
                 <AuthorizationGrantTypes>
                     <GrantType>authorization_code</GrantType>

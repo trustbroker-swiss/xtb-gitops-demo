@@ -26,7 +26,6 @@ You can instead use:
                 <OidcSecurityPolicies
                         requireProofKey="true"
                         tokenTimeToLiveMin="10"
-                        sessionTimeToLiveMin="20"
                 />
                 <AuthorizationGrantTypes>
                     <GrantType>authorization_code</GrantType>
