@@ -1,6 +1,5 @@
 <saml2p:AuthnRequest xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol"
 					 AssertionConsumerServiceURL="http://localhost:7070/authn/consumer"
-					 Destination="http://localhost:8090/api/v1/saml"
 					 ForceAuthn="false"
 					 ID="AuthnRequest_24542162e7a65118bd8cc4ba5a9e98e9d9a70640"
 					 IssueInstant="2021-08-25T09:48:56.640Z"
