@@ -3,7 +3,6 @@
 # Translation generator for 4 languages en, de, fr, it.
 # * signals that the same text is sued for all languages.
 # Use prefixes [EN], [DE], [FR], [IT] if a text needs to be translated still.
-# Note that many texts still come from the old ADFS trustbroker CSV file (see mapping table below)
 
 import logging
 import os
