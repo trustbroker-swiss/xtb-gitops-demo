@@ -55,7 +55,7 @@ trustbroker:
     claimsMapping:
       syncSchedule: '0 */1 * * * *' # check for git changes every 1min
     stateCache:
-      reapSchedule: '30 * * * * *' # check every 30s for collectable sessions
+      reapSchedule: '30 * * * * *' # check every minute for collectable sessions (see spring CronExpression)
       reapMaxDelaySec: 25 # randomize actual execution start in multiple instance deployments (K8S replicas)
       targetMaxEntries: 104857 # may number of sessions before garbage collecting the oldest valid ones
       minSessionLifetimeSec: ${trustbroker.config.sessionLifetimeSec}

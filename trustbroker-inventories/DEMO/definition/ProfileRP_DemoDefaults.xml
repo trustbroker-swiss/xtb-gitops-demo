@@ -35,7 +35,6 @@
 			<!-- Supported subset of https://openid.net/specs/openid-connect-core-1_0.html#TokenRequest -->
 			<AuthorizationGrantTypes>
 				<GrantType>authorization_code</GrantType>
-				<GrantType>client_secret_post</GrantType>
 				<GrantType>refresh_token</GrantType>
 			</AuthorizationGrantTypes>
 			<!-- Supported subset of https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication -->
