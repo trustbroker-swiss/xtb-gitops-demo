@@ -45,7 +45,7 @@ trustbroker:
     ssoSessionLifetimeSec: 43200 # 12h without re-auth when SSO enabled=true and not SAML forceAuthn=true or OIDC prompt=login
     ssoMinQoaLevel: -2 # we allow SSO for any QOA level sent by CP i.e. unspecified having order# -1 is good enough
     handleResponderErrors: false # Pass through CP/IDP SAML responder messages to CP/SP
-    # Allow access to some halfway public APIs usually not exposed on internet )header injected by network perimeter)
+    # Allow access to some halfway public APIs usually not exposed on internet (header injected by network perimeter)
     network:
       networkHeader: 'X-ClientNetwork'
       internetNetworkName: INTERNET
