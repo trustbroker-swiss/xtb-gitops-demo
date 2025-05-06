@@ -52,24 +52,24 @@
 			<!-- Claims see at https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims -->
 			<ClaimsSelection>
 				<Definition name="EMail" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
-							oidcNames="email" multiValued="STRING" />
+							oidcNames="email" multiValued="STRING"/>
 				<Definition name="FirstName" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"
-							oidcNames="given_name" />
+							oidcNames="given_name"/>
 				<Definition name="Name" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"
-							oidcNames="family_name" />
+							oidcNames="family_name"/>
 				<Definition name="dateOfBirth" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/dateofbirth"
-							oidcNames="birthdate" multiValued="STRING" oidcMapper="TIME_EPOCH" />
+							oidcNames="birthdate" multiValued="STRING" oidcMapper="TIME_EPOCH"/>
 				<Definition name="address" namespaceUri="address"
-							oidcNames="address" />
+							oidcNames="address"/>
 				<Definition name="displayName" namespaceUri="2.16.840.1.113730.3.1.241"
-							oidcNames="name" multiValued="LIST" />
+							oidcNames="name" multiValued="LIST"/>
 				<Definition name="displayName" namespaceUri="2.16.840.1.113730.3.1.241"
-							oidcNames="name" multiValued="LIST" />
+							oidcNames="name" multiValued="LIST"/>
 			</ClaimsSelection>
 		</Client>
 	</Oidc>
 	<Saml>
-		<ArtifactBinding inboundMode="SUPPORTED" outboundMode="SUPPORTED" />
+		<ArtifactBinding inboundMode="SUPPORTED" outboundMode="SUPPORTED"/>
 		<!-- XML security defaults according to https://www.w3.org/TR/xmlsec-algorithms/ -->
 		<Signature>
 			<CanonicalizationAlgorithm>http://www.w3.org/2001/10/xml-exc-c14n#</CanonicalizationAlgorithm>
@@ -78,12 +78,12 @@
 		</Signature>
 	</Saml>
 	<!-- SSO also is used in disabled mode so XTB knows where to send the LogoutResponse to -->
-	<SSO enabled="false" sloUrl="please-define-if-rp-does-saml-logouts" />
+	<SSO enabled="false" sloUrl="please-define-if-rp-does-saml-logouts"/>
 	<!-- Processing: Accepted incoming original issuer attributes -->
 	<AttributesSelection>
-		<Definition name="EMail" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" />
-		<Definition name="FirstName" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" />
-		<Definition name="FamilyName" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname" />
+		<Definition name="EMail" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"/>
+		<Definition name="FirstName" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"/>
+		<Definition name="FamilyName" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"/>
 		<Definition name="dateOfBirth" namespaceUri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/dateofbirth"/>
 		<Definition name="displayName" namespaceUri="2.16.840.1.113730.3.1.241"/>
 		<!-- CP is visible only in SAML OriginalIssuer in RP response. Make it visible as an OIDC claim. -->
@@ -92,9 +92,9 @@
 	<!-- Processing: Attributes computed in groovy scripts. It's possible to use oidcNames declarations already on any selection definition. -->
 	<PropertiesSelection>
 		<!-- Computed birthdate can be picked exclusively (remove from AttributesSelection above, or in the groovy script. -->
-		<Definition name="displayName" namespaceUri="2.16.840.1.113730.3.1.241" oidcNames="name" multiValued="LIST" />
+		<Definition name="displayName" namespaceUri="2.16.840.1.113730.3.1.241" oidcNames="name" multiValued="LIST"/>
 		<!-- ssoSessionId is an XTB specific claim that allows to identify the federation session source -->
-		<Definition name="ssoSessionId" namespaceUri="http://trustbroker.swiss/claims/ssoSessionId" oidcNames="ssoSessionId" />
+		<Definition name="ssoSessionId" namespaceUri="http://trustbroker.swiss/claims/ssoSessionId" oidcNames="ssoSessionId"/>
 	</PropertiesSelection>
 	<!-- Processing: All RP side hooks dumping provided request/response data -->
 	<Scripts>

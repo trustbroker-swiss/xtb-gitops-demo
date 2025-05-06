@@ -5,7 +5,7 @@
 					 IssueInstant="2021-08-25T09:48:56.640Z"
 					 Version="2.0"
 >
-	<saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">urn:trustbroker.swiss:sp:ERROR-UNKNWON-RP</saml2:Issuer>
+	<saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">urn:trustbroker.swiss:sp:SSO-RP-2</saml2:Issuer>
 	<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 		<ds:SignedInfo>
 			<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>

@@ -11,39 +11,39 @@ You can instead use:
 - https://jwt.io
 -->
 <RelyingPartySetup>
-    <RelyingParty id="XTB_demo-pkce" base="ProfileRP_DemoDefaults.xml">
-        <Oidc>
-            <!--
-            Configuring a realm allows to differentiate OIDC clients in access logs.
-            Hand out /realms/demo/.well-known/openid-configuration necessary to use it.
-            -->
-            <Client id="XTB_demo-pkce" realm="demo">
-                <RedirectUris>
-                    <ACUrl>https://spoofable.redirect.uri.*</ACUrl> <!-- rejected, domain spoofing possible here -->
-                    <ACUrl>http://localhost:0/.*</ACUrl> <!-- accepted, developers put services anywhere (0 == any port) -->
-                    <ACUrl>https://oidcdebugger.com/debug</ACUrl> <!-- play around with authorization_code flows -->
-                </RedirectUris>
-                <OidcSecurityPolicies
-                        requireProofKey="true"
-                        tokenTimeToLiveMin="10"
-                />
-                <AuthorizationGrantTypes>
-                    <GrantType>authorization_code</GrantType>
-                    <GrantType>refresh_token</GrantType>
-                </AuthorizationGrantTypes>
-                <ClientAuthenticationMethods>
-                    <Method>none</Method>
-                </ClientAuthenticationMethods>
-                <Scopes>
-                    <Scope>openid</Scope>
-                </Scopes>
-            </Client>
-        </Oidc>
-        <ClaimsProviderMappings>
-            <ClaimsProvider id="urn:trustbroker.swiss:idp:SAML-MOCK-2" />
-        </ClaimsProviderMappings>
-        <Scripts>
-            <Script type="OnToken">OidcAttachAddressClaim.groovy</Script>
-        </Scripts>
-    </RelyingParty>
+	<RelyingParty id="XTB_demo-pkce" base="ProfileRP_DemoDefaults.xml">
+		<Oidc>
+			<!--
+			Configuring a realm allows to differentiate OIDC clients in access logs.
+			Hand out /realms/demo/.well-known/openid-configuration necessary to use it.
+			-->
+			<Client id="XTB_demo-pkce" realm="demo">
+				<RedirectUris>
+					<ACUrl>https://spoofable.redirect.uri.*</ACUrl> <!-- rejected, domain spoofing possible here -->
+					<ACUrl>http://localhost:0/.*</ACUrl> <!-- accepted, developers put services anywhere (0 == any port) -->
+					<ACUrl>https://oidcdebugger.com/debug</ACUrl> <!-- play around with authorization_code flows -->
+				</RedirectUris>
+				<OidcSecurityPolicies
+						requireProofKey="true"
+						tokenTimeToLiveMin="10"
+				/>
+				<AuthorizationGrantTypes>
+					<GrantType>authorization_code</GrantType>
+					<GrantType>refresh_token</GrantType>
+				</AuthorizationGrantTypes>
+				<ClientAuthenticationMethods>
+					<Method>none</Method>
+				</ClientAuthenticationMethods>
+				<Scopes>
+					<Scope>openid</Scope>
+				</Scopes>
+			</Client>
+		</Oidc>
+		<ClaimsProviderMappings>
+			<ClaimsProvider id="urn:trustbroker.swiss:idp:SAML-MOCK-1"/>
+		</ClaimsProviderMappings>
+		<Scripts>
+			<Script type="OnToken">OidcAttachAddressClaim.groovy</Script>
+		</Scripts>
+	</RelyingParty>
 </RelyingPartySetup>

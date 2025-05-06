@@ -91,6 +91,20 @@ trustbroker:
       doSignAssertions: true # RP/SP responses must contain assertion signed by XTB
       doSignSuccessResponse: true # RP/SP responses must be signed by XTB
       doSignFailureResponse: true # RP/SP responders messages must be signed too
+    # global Qoa model defining the order, order then optional in SetupRP/SetupCP
+    qoa:
+      defaultQoa: 'urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport'
+      strongestPossible: 'urn:oasis:names:tc:SAML:2.0:ac:classes:SmartcardPKI'
+      mapping:
+        '[urn:oasis:names:tc:SAML:2.0:ac:classes:MobileOneFactorUnregistered]': 100
+        '[urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport]': 200
+        '[urn:oasis:names:tc:SAML:2.0:ac:classes:NomadTelephony]': 300
+        '[urn:oasis:names:tc:SAML:2.0:ac:classes:SoftwareTimeSyncToken]': 300
+        '[urn:oasis:names:tc:SAML:2.0:ac:classes:Kerberos]': 400
+        '[urn:oasis:names:tc:SAML:2.0:ac:classes:SoftwarePKI]': 500
+        '[urn:oasis:names:tc:SAML:2.0:ac:classes:MobileTwoFactorContract]': 500
+        '[urn:oasis:names:tc:SAML:2.0:ac:classes:TimeSyncToken]': 500
+        '[urn:oasis:names:tc:SAML:2.0:ac:classes:SmartcardPKI]': 600
     saml:
       consumerUrl: ${trustbroker.config.perimeterUrl}/api/v1/saml # SAML post protocol endpoint
       artifactResolution:

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelyingPartySetup>
+	<RelyingParty id="urn:trustbroker.swiss:sp:QOA-RP-2" base="ProfileRP_DemoDefaults.xml">
+		<ACWhitelist>
+			<ACUrl>http://localhost:7070/authn/consumer</ACUrl>
+		</ACWhitelist>
+		<SSO enabled="false" sloUrl="http://localhost:7070/auth/saml/slo"/>
+		<ClaimsProviderMappings>
+			<ClaimsProvider id="urn:trustbroker.swiss:idp:SAML-MOCK-2"/>
+		</ClaimsProviderMappings>
+		<Qoa enforce="true">
+			<!-- Accepted Qoa names sent by RPs, order number is optional if trustbroker.config.qoa defines a global model -->
+			<ACClass order="099">qoa-099-custom</ACClass>
+			<ACClass order="100">urn:oasis:names:tc:SAML:2.0:ac:classes:MobileOneFactorUnregistered</ACClass>
+			<ACClass order="200">urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</ACClass>
+			<ACClass order="300">urn:oasis:names:tc:SAML:2.0:ac:classes:NomadTelephony</ACClass>
+			<ACClass order="301">urn:oasis:names:tc:SAML:2.0:ac:classes:SoftwareTimeSyncToken</ACClass>
+			<ACClass order="400">urn:oasis:names:tc:SAML:2.0:ac:classes:Kerberos</ACClass>
+			<ACClass order="500">urn:oasis:names:tc:SAML:2.0:ac:classes:SoftwarePKI</ACClass>
+			<ACClass order="501">urn:oasis:names:tc:SAML:2.0:ac:classes:MobileTwoFactorContract</ACClass>
+			<ACClass order="502">urn:oasis:names:tc:SAML:2.0:ac:classes:TimeSyncToken</ACClass>
+			<ACClass order="600">urn:oasis:names:tc:SAML:2.0:ac:classes:MobileOneSmartcardPKIFactorUnregistered</ACClass>
+		</Qoa>
+	</RelyingParty>
+</RelyingPartySetup>
