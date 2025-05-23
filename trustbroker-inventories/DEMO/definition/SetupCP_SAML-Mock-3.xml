@@ -12,7 +12,7 @@
 			<ArtifactBinding inboundMode="SUPPORTED" outboundMode="SUPPORTED"/>
 		</Saml>
 		<!-- CP-side QoA supported mapped from RP-side context classes supports only weak QoA-->
-		<Qoa enforce="false" comparison="exact">
+		<Qoa enforce="false" comparison="EXACT">
 			<ACClass order="200">urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</ACClass>
 		</Qoa>
 		<!-- CP attributes to be propagated -->
