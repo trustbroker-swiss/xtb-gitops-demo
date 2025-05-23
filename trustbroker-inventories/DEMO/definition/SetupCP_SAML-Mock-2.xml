@@ -24,8 +24,8 @@
 			/>
 		</SubjectNameMappings>
 		<!-- CP-side QoA supported mapped from RP-side context classes (100 and 600 not supported by CP) -->
-		<!-- SAML comparisonType=EXACT is default, MINIMUM is used when RP does not send it, invalid RP ctxClasses are dropped. -->
-		<Qoa enforce="true" comparison="MINIMUM" mapOutbound="true" dropUnnappable="true">
+		<!-- SAML comparisonType=EXACT is default, MINIMUM is used when RP does not send it, invalid RP ctxClasses are passed on per default. -->
+		<Qoa enforce="true" comparison="MINIMUM">
 			<ACClass order="099">urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</ACClass>
 			<ACClass order="200">urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</ACClass>
 			<ACClass order="300">urn:oasis:names:tc:SAML:2.0:ac:classes:MobileTwoFactorContract</ACClass>
