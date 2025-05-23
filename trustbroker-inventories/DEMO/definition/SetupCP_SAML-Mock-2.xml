@@ -18,8 +18,8 @@
 		<!-- use another claim as NameID on CP side -->
 		<SubjectNameMappings preserve="false">
 			<SubjectName
-					issuer="urn:trustbroker.swiss:idp:SAML-MOCK-2"
-					source="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
+					source="urn:trustbroker.swiss:idp:SAML-MOCK-2"
+					claim="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
 					format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
 			/>
 		</SubjectNameMappings>
