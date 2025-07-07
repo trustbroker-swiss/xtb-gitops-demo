@@ -32,7 +32,7 @@ spring:
     password: ${STATECACHE_PASS}
     schemas: TBSS16
     driver-class-name: org.mariadb.jdbc.Driver
-    locations: [classpath:db/migration/mariadb]
+    locations: [ classpath:db/migration/mariadb ]
     baselineOnMigrate: true # force upgrading XTB schema even though the database is not empty
 
 trustbroker:

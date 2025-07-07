@@ -18,14 +18,14 @@
 		<!-- use another claim as NameID on CP side -->
 		<SubjectNameMappings preserve="false">
 			<SubjectName
-					source="urn:trustbroker.swiss:idp:SAML-MOCK-2"
-					claim="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
+					issuer="urn:trustbroker.swiss:idp:SAML-MOCK-2"
+					source="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
 					format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
 			/>
 		</SubjectNameMappings>
 		<!-- CP-side QoA supported mapped from RP-side context classes (100 and 600 not supported by CP) -->
-		<!-- SAML comparisonType=EXACT is default, MINIMUM is used when RP does not send it, invalid RP ctxClasses are passed on per default. -->
-		<Qoa enforce="true" comparison="MINIMUM">
+		<!-- SAML comparisonType=exact is default, minimum is used when RP does not send it,  -->
+		<Qoa enforce="true" comparison="minimum">
 			<ACClass order="099">urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</ACClass>
 			<ACClass order="200">urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</ACClass>
 			<ACClass order="300">urn:oasis:names:tc:SAML:2.0:ac:classes:MobileTwoFactorContract</ACClass>

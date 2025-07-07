@@ -4,7 +4,7 @@
 					  IssueInstant="2022-03-16T14:24:24.914014702Z"
 					  Version="2.0"
 >
-	<saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">urn:trustbroker.swiss:sp:DEMO-RP-1</saml2:Issuer>
+	<saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">urn:trustbroker.swiss:sp:HRD-RP-1</saml2:Issuer>
 	<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 		<ds:SignedInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
 			<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
